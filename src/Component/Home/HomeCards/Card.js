@@ -8,8 +8,8 @@ class Card extends React.Component {
         return(
             <div className="col-4">
             <div key={this.props.id} className="card">
-                <div class="card-body">
-                    <h5 class="card-title">Topic : {this.props.topic}</h5>
+                <div className="card-body">
+                    <h5 className="card-title">Topic : {this.props.topic}</h5>
                 </div>
             </div>
         </div>

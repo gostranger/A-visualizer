@@ -1,7 +1,10 @@
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className="page-footer font-small bg-dark">
+        <div className="footer-copyright text-center py-3 text-light">© 2020 Copyright: <span> A-Visualizer</span>
+        </div>
+    </div>
   );
 }
 

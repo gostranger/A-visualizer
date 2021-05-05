@@ -1,9 +1,10 @@
 import React from 'react';
-import Button from './Component/Button/Button';
 import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
-import Homecard from './Component/HomeCards/Homecard';
+import Home from './Component/Home/Home';
 import * as Constants from './Constants';
+import Server from './Component/Server/Server';
+import Settings from './Component/Settings/Settings';
 
 class App extends React.Component {
   constructor(props){
@@ -21,16 +22,22 @@ class App extends React.Component {
     
     let Content;
     if(this.state.currentMenu===Constants.MENU_HOME){
-      Content = <Button/>;
+      Content = <Home/>;
     }else if(this.state.currentMenu===Constants.MENU_SERVER){
-      Content = <Homecard />;
+      Content = <Server />;
     }else if(this.state.currentMenu===Constants.MENU_SETTINGS){
-      Content = <Footer/>;
+      Content = <Settings/>;
+    }
+    let customStyle = {
+      'min-height': '100vh'
     }
     return (
-      <div>
+      <div className="d-flex flex-column" style={customStyle}>
         <Header currentMenu={this.state.currentMenu} menuClickHandler={this.currentMenuHandler}/>
-        {Content}
+        <div className="container flex-grow-1">
+            {Content}
+        </div>
+        <Footer/>
       </div>
     );
   }

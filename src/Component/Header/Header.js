@@ -9,9 +9,9 @@ class Header extends React.Component {
     });
 
     return (
-      <div className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div className="navbar navbar-expand-lg responsive navbar-dark bg-dark">
         <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
+          <ul className=" container navbar-nav mr-auto">
             {listitem}
           </ul>
         </div>
